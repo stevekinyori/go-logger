@@ -11,6 +11,8 @@ import (
 const (
 	debugLogLevel    = "debug"
 	infoLogLevel     = "info"
+	warningLogLevel  = "warning"
+	errorLogLevel    = "error"
 	logPrefixMissing = "missing"
 )
 
@@ -25,6 +27,14 @@ func initLogger(logType string) *log.Logger {
 
 func Info(message string) {
 	initLogger(infoLogLevel).Println(message)
+}
+
+func Warning(message string) {
+	initLogger(warningLogLevel).Println(message)
+}
+
+func Error(message string) {
+	initLogger(errorLogLevel).Println(message)
 }
 
 func Debug(message string) {
@@ -52,6 +62,14 @@ func SetLogLevelDebug() {
 
 func SetLogLevelInfo() {
 	logLevel = infoLogLevel
+}
+
+func SetLogLevelWarning() {
+	logLevel = warningLogLevel
+}
+
+func SetLogLevelError() {
+	logLevel = errorLogLevel
 }
 
 func GetLogLevel() string {
