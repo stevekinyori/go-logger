@@ -9,12 +9,12 @@ A simple and lightweight logging package for Go.
 # Installation
 To install the package, simply run:
 
-``` go get github.com/yourusername/logger ```
+``` go get github.com/stevekinyori/logger ```
 
 # Usage
 To start using the package, import it in your Go file:
 
-```import "github.com/yourusername/logger" ```
+```import "github.com/stevekinyori/logger" ```
 
 # Logging messages
 There are four main functions for logging messages:
